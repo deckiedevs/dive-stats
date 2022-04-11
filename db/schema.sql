@@ -54,3 +54,6 @@ CREATE TABLE dives (
     diver_id INTEGER NOT NULL REFERENCES divers(id) ON DELETE CASCADE,
     location_id INTEGER NOT NULL REFERENCES locations(id) ON DELETE CASCADE
 );
+
+CREATE INDEX diver_index ON dives (diver_id);
+CREATE INDEX location_index ON dives (location_id);
