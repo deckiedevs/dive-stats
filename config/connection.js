@@ -15,5 +15,8 @@ types.setTypeParser(20, (val) => {
 module.exports = {
     query: (text, params) => {
         return pool.query(text, params);
-    }
+    },
+    getClient: () => {
+        return pool.connect();
+    },
 };
